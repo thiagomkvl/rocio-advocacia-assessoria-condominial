@@ -1,9 +1,9 @@
-import { Header } from "@/components/Header";
-import { HeroSection } from "@/components/HeroSection";
-import { ProblemSection } from "@/components/ProblemSection";
-import { MethodSection } from "@/components/MethodSection";
-import { ClosingSection } from "@/components/ClosingSection";
-import { Footer } from "@/components/Footer";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ProblemSection from "@/components/ProblemSection";
+import MethodSection from "@/components/MethodSection";
+import ClosingSection from "@/components/ClosingSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
