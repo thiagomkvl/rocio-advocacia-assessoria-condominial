@@ -74,38 +74,6 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
         </RadioGroup>
       </div>
 
-      <div className={`space-y-2 ${!isMobile && "lg:space-y-3"}`}>
-        <Label className={`font-medium text-foreground/90 ${radioTextClasses}`}>
-          Qual o maior desafio atual na gestão?
-        </Label>
-        <RadioGroup value={formData.challenge} onValueChange={(value) => setFormData({ ...formData, challenge: value })} required>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Inadimplência e cobrança" id="c1" className={isMobile ? "w-4 h-4" : "w-5 h-5"} />
-            <Label htmlFor="c1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Inadimplência e cobrança</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Conflitos entre moradores (barulho, pets, vagas)" id="c2" className={isMobile ? "w-4 h-4" : "w-5 h-5"} />
-            <Label htmlFor="c2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Conflitos entre moradores (barulho, pets, vagas)</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Assembleias e decisões" id="c3" className={isMobile ? "w-4 h-4" : "w-5 h-5"} />
-            <Label htmlFor="c3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Assembleias e decisões</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Manutenção e responsabilidades" id="c4" className={isMobile ? "w-4 h-4" : "w-5 h-5"} />
-            <Label htmlFor="c4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Manutenção e responsabilidades</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Multas e notificações" id="c5" className={isMobile ? "w-4 h-4" : "w-5 h-5"} />
-            <Label htmlFor="c5" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Multas e notificações</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Outro" id="c6" className={isMobile ? "w-4 h-4" : "w-5 h-5"} />
-            <Label htmlFor="c6" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Outro</Label>
-          </div>
-        </RadioGroup>
-      </div>
-
       <Button
         type="submit"
         className={`w-full ${isMobile ? "h-12 text-sm" : "h-14 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300`}
