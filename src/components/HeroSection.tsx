@@ -7,16 +7,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Phone, Building2, FileCheck, Gift } from "lucide-react";
 import { toast } from "sonner";
 
-// Import da imagem de fundo
+
 import heroBg from "@/assets/hero-bg.jpg";
 
 const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycby8cT4P-Yz8i1nAy1KlDDWtG2Fbm7swaZTlZFPw-JgM1Dq5kncsn8Gfxbl11DcEvToA/exec";
 
 const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
-  const inputClasses = isMobile ? "h-12 text-base" : "h-14 text-lg"; // Aumentado para melhor usabilidade mobile
-  const radioTextClasses = isMobile ? "text-base" : "text-lg"; // Textos maiores no mobile
+  const inputClasses = isMobile ? "h-12 text-base" : "h-14 text-lg";
+  const radioTextClasses = isMobile ? "text-base" : "text-lg"; // 
   return (
-    <form onSubmit={handleSubmit} className={`space-y-4 ${isMobile ? "space-y-6" : "lg:space-y-5"}`}> // Mais espaço no mobile
+    <form onSubmit={handleSubmit} className={`space-y-4 ${isMobile ? "space-y-6" : "lg:space-y-5"}`}>
       <div>
         <Input
           type="text"
@@ -24,7 +24,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
-          className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`} // Arredondado para melhor touch
+          className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`} 
         />
       </div>
       <div>
@@ -47,7 +47,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
           className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`}
         />
       </div>
-      <div className={`space-y-2 ${isMobile ? "space-y-4" : "lg:space-y-3"}`}> // Mais espaço entre opções no mobile
+      <div className={`space-y-2 ${isMobile ? "space-y-4" : "lg:space-y-3"}`}> 
         <Label className={`font-medium text-foreground/90 ${radioTextClasses}`}>
           Qual o perfil principal do seu condomínio?
         </Label>
@@ -76,19 +76,19 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       </div>
       <Button
         type="submit"
-        className={`w-full ${isMobile ? "h-14 text-base" : "h-14 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 rounded-lg`} // Maior e arredondado no mobile
+        className={`w-full ${isMobile ? "h-14 text-base" : "h-14 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 rounded-lg`} 
       >
-        QUERO MEU DIAGNÓSTICO ESTRATÉGICO
+        QUERO MEU DIAGNÓSTICO
       </Button>
     </form>
   );
 };
 
 const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
-  const iconSize = isMobile ? "w-5 h-5" : "w-5 h-5"; // Maior no mobile
-  const textSize = isMobile ? "text-base" : "text-base"; // Maior no mobile
+  const iconSize = isMobile ? "w-5 h-5" : "w-5 h-5"; 
+  const textSize = isMobile ? "text-base" : "text-base";
   return (
-    <Card className={`shadow-lg border border-border/50 w-full h-full ${isMobile ? "rounded-2xl" : "rounded-lg"}`}> // Mais arredondado no mobile
+    <Card className={`shadow-lg border border-border/50 w-full h-full ${isMobile ? "rounded-2xl" : "rounded-lg"}`}> 
       <CardContent className="pt-6 bg-card text-card-foreground h-full flex flex-col">
         <ul className={`space-y-4 ${isMobile ? "mb-6" : "mb-6"}`}>
           <li className="flex items-start gap-3">
