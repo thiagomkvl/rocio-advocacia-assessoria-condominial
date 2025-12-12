@@ -53,7 +53,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
         </Label>
         <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required>
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} /> // Maior no mobile
+            <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} /> // 
             <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Assembleias e Decisões</Label>
           </div>
           <div className="flex items-center space-x-2">
