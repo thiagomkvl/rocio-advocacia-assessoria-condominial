@@ -14,10 +14,10 @@ export const Footer = () => {
               className="h-14 object-contain mb-4"
             />
             <p className="text-sm text-foreground/70 text-center md:text-left">
-              Direito Imobiliário Estratégico
+              Direito Condominial Estratégico
             </p>
             <p className="text-sm text-foreground/60 mt-2 text-center md:text-left">
-              Mais de 10 anos construindo confiança no setor imobiliário.
+              Mais de 10 anos construindo harmonia em condomínios.
             </p>
           </div>
 
@@ -44,10 +44,10 @@ export const Footer = () => {
           <div>
             <h4 className="text-base font-semibold mb-4 text-foreground">Áreas de Atuação</h4>
             <ul className="space-y-2 text-sm text-foreground/70">
+              <li>Direito Condominial</li>
               <li>Direito Imobiliário</li>
               <li>Direito Empresarial</li>
               <li>Direito Trabalhista</li>
-              <li>Direito Previdenciário</li>
             </ul>
           </div>
         </div>

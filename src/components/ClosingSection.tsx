@@ -20,10 +20,10 @@ export const ClosingSection = () => {
             <Shield className="w-10 h-10 text-accent" />
           </div>
           <h2 className="text-3xl md:text-5xl font-semibold leading-tight">
-            Chegou a Hora de Blindar Seu Investimento
+            Chegou a Hora de Blindar a Gestão do Seu Condomínio
           </h2>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Não espere um problema acontecer para buscar uma solução. A prevenção é o melhor investimento em seu patrimônio.
+            Não espere um conflito explodir para buscar ajuda. A prevenção é o melhor investimento na paz e valorização do seu patrimônio.
           </p>
         </div>
 
@@ -37,10 +37,10 @@ export const ClosingSection = () => {
 
           <CardContent className="space-y-8 p-6 md:p-10">
             {[
-              { num: "1", title: "Primeira Consulta sem Custo", desc: "Nossa equipe especializada entrará em contato para entender seu empreendimento e suas necessidades." },
-              { num: "2", title: "Análise Preliminar", desc: "Revisão completa do seu empreendimento, identificando riscos e oportunidades de blindagem jurídica." },
+              { num: "1", title: "Primeira Consulta sem Custo", desc: "Nossa equipe especializada entrará em contato para entender seu condomínio e suas necessidades." },
+              { num: "2", title: "Análise Preliminar", desc: "Revisão de convenção, regimento e principais riscos do seu condomínio." },
               { num: "3", title: "Entrega do Diagnóstico Estratégico", desc: "Relatório técnico detalhado com mapeamento de riscos e recomendações prioritárias." },
-              { num: "4", title: "Plano de Implementação", desc: "Estratégia completa, cronograma e início da parceria com a Rocio Advocacia, com acompanhamento personalizado." },
+              { num: "4", title: "Plano de Implementação", desc: "Início da assessoria contínua, com suporte ilimitado via WhatsApp/e-mail e acompanhamento mensal personalizado." },
             ].map((etapa) => (
               <div key={etapa.num} className="flex items-start gap-5">
                 <div className="w-12 h-12 md:w-14 md:h-14 bg-accent rounded-full flex items-center justify-center flex-shrink-0 font-semibold text-xl md:text-2xl text-accent-foreground">
