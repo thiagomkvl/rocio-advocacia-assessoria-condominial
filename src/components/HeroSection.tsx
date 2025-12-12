@@ -168,7 +168,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80 sm:bg-gradient-to-r sm:from-background/80 sm:via-background/60 sm:to-background/80" />
 
       <div className="relative z-10">
-        <div className="sm:hidden py-16 px-4">
+        <div className="sm:hidden pt-32 pb-16 px-4">
           <div className="animate-fade-in text-center">
             <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground">
               Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
