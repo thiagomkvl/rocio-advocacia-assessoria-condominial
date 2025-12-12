@@ -7,14 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Phone, Building2, FileCheck, Gift } from "lucide-react";
 import { toast } from "sonner";
 
-
 import heroBg from "@/assets/hero-bg.jpg";
 
 const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycby8cT4P-Yz8i1nAy1KlDDWtG2Fbm7swaZTlZFPw-JgM1Dq5kncsn8Gfxbl11DcEvToA/exec";
 
 const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
   const inputClasses = isMobile ? "h-12 text-base" : "h-14 text-lg";
-  const radioTextClasses = isMobile ? "text-base" : "text-lg"; // 
+  const radioTextClasses = isMobile ? "text-base" : "text-lg";
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 ${isMobile ? "space-y-6" : "lg:space-y-5"}`}>
       <div>
@@ -24,7 +23,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
-          className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`} 
+          className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`}
         />
       </div>
       <div>
@@ -47,13 +46,13 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
           className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`}
         />
       </div>
-      <div className={`space-y-2 ${isMobile ? "space-y-4" : "lg:space-y-3"}`}> 
+      <div className={`space-y-2 ${isMobile ? "space-y-4" : "lg:space-y-3"}`}>
         <Label className={`font-medium text-foreground/90 ${radioTextClasses}`}>
           Qual o perfil principal do seu condomínio?
         </Label>
         <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required>
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} /> 
+            <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
             <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Assembleias e Decisões</Label>
           </div>
           <div className="flex items-center space-x-2">
@@ -76,7 +75,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       </div>
       <Button
         type="submit"
-        className={`w-full ${isMobile ? "h-14 text-base" : "h-14 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 rounded-lg`} 
+        className={`w-full ${isMobile ? "h-14 text-base" : "h-14 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 rounded-lg`}
       >
         QUERO MEU DIAGNÓSTICO
       </Button>
@@ -85,12 +84,12 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
 };
 
 const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
-  const iconSize = isMobile ? "w-5 h-5" : "w-5 h-5"; 
+  const iconSize = isMobile ? "w-5 h-5" : "w-5 h-5";
   const textSize = isMobile ? "text-base" : "text-base";
   return (
-    <Card className={`shadow-lg border border-border/50 w-full h-full ${isMobile ? "rounded-2xl" : "rounded-lg"}`}> 
+    <Card className={`shadow-lg border border-border/50 w-full h-full ${isMobile ? "rounded-2xl" : "rounded-lg"}`}>
       <CardContent className="pt-6 bg-card text-card-foreground h-full flex flex-col">
-        <ul className={`space-y-4 ${isMobile ? "mb-6" : "mb-6"}`}>
+        <ul className="space-y-4 mb-6">
           <li className="flex items-start gap-3">
             <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
             <span className={`${textSize} text-foreground/90`}>
@@ -161,18 +160,17 @@ export const HeroSection = () => {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Imagem de fundo pura */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
-      {/* Conteúdo original com z-10 */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80 sm:bg-gradient-to-r sm:from-background/80 sm:via-background/60 sm:to-background/80" />
+
       <div className="relative z-10">
-        {/* MOBILE – otimizado */}
-        <div className="sm:hidden py-16 px-4"> // Padding menor para telas pequenas
+        <div className="sm:hidden py-16 px-4">
           <div className="animate-fade-in text-center">
-            <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground"> // Maior e mais apertado para caber melhor
+            <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground">
               Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
             </h1>
             <p className="text-base text-foreground/80 mb-10 leading-relaxed">
@@ -181,12 +179,12 @@ export const HeroSection = () => {
             <Button
               size="lg"
               onClick={() => window.open("https://wa.me/5598992252729", "_blank")}
-              className="w-full mb-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-7 text-base" // Botão maior
+              className="w-full mb-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-7 text-base"
             >
-              <Phone className="mr-2 w-6 h-6" /> // Ícone maior
+              <Phone className="mr-2 w-6 h-6" />
               FALAR COM ESPECIALISTA
             </Button>
-            <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-2xl border-b border-accent/30 w-full text-center"> // Mais arredondado
+            <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-2xl border-b border-accent/30 w-full text-center">
               <h2 className="text-xl font-semibold mb-2 text-foreground font-sans tracking-wide uppercase">Diagnóstico Estratégico</h2>
             </div>
             <div className="w-full">
@@ -195,11 +193,9 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* DESKTOP */}
         <div className="hidden sm:block py-16 md:py-20 lg:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
-              {/* Título com especialização */}
               <div className="lg:w-1/2 animate-fade-in">
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
                   <div className="mb-5 lg:mb-6">
@@ -210,7 +206,6 @@ export const HeroSection = () => {
                       A Rocio Advocacia transforma conflitos e incertezas em Harmonia e Previsibilidade com o Método Assessoria Condominial Blindada.
                     </p>
                   </div>
-                  {/* Três Pilares – agora com mesmo overlay do Resultado */}
                   <div className="mb-5 lg:mb-6">
                     <h3 className="text-lg font-semibold mb-3 lg:mb-4 text-foreground flex items-center">
                       <Building2 className="w-5 h-5 mr-2 text-accent" />
@@ -228,7 +223,6 @@ export const HeroSection = () => {
                       </div>
                     </div>
                   </div>
-                  {/* Resultados */}
                   <div className="mb-5 lg:mb-6">
                     <h3 className="text-lg font-semibold mb-3 lg:mb-4 text-foreground flex items-center">
                       <FileCheck className="w-5 h-5 mr-2 text-accent" />
@@ -246,7 +240,6 @@ export const HeroSection = () => {
                       </div>
                     </div>
                   </div>
-                  {/* Botão Falar com Especialista */}
                   <div className="mt-auto pt-4 lg:pt-5 border-t border-border/30">
                     <Button
                       size="lg"
@@ -263,7 +256,6 @@ export const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              {/* Formulário */}
               <div className="lg:w-1/2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <div className="h-full flex flex-col">
                   <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-md border-b border-accent/30 w-full text-center">
