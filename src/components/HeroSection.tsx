@@ -185,10 +185,10 @@ export const HeroSection = () => {
         <div className="sm:hidden py-16 px-4">
           <div className="animate-fade-in text-center">
             <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground pt-8">
-              Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
+              Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
             </h1>
             <p className="text-base text-foreground/80 mb-10 leading-relaxed">
-              A Rocio Advocacia transforma conflitos e incertezas em Harmonia e Previsibilidade com o Método Assessoria Condominial Blindada.
+              Transformamos conflitos e incertezas em Harmonia e Previsibilidade com o Assessoria Jurídica Condominial.
             </p>
             <Button
               size="lg"
@@ -217,7 +217,7 @@ export const HeroSection = () => {
                       Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
                     </h1>
                     <p className="text-base lg:text-lg text-foreground/80 leading-relaxed">
-                      A Rocio Advocacia transforma conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
+                      Transformamos conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
                     </p>
                   </div>
                   
