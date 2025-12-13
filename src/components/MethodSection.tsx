@@ -129,7 +129,7 @@ export const MethodSection = () => {
             </div>
 
             <p className="text-base md:text-lg text-foreground/90 leading-relaxed text-center max-w-3xl mx-auto mb-6">
-              A Rocio Advocacia possui uma década de excelência comprovada em Direito Condominial, com equipe especializada pronta para transformar desafios cotidianos em gestão serena e eficiente.
+              A Rocio Advocacia possui uma década de excelência comprovada em Direito Imobiliário, com equipe especializada pronta para transformar desafios cotidianos em gestão serena e eficiente.
             </p>
 
             {/* Depoimento em destaque */}
