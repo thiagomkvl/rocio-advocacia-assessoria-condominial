@@ -1,134 +1,147 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Building2, Quote } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export const MethodSection = () => {
+  // Dados consistentes para desktop e mobile
+  const pilares = [
+    { 
+      num: "1", 
+      title: "Assessoria Preventiva", 
+      foco: "Orientação diária ao síndico, revisão de convenções e regimentos internos para evitar litígios", 
+      resultado: "Redução de até 80% em ações judiciais desnecessárias" 
+    },
+    { 
+      num: "2", 
+      title: "Cobrança Eficiente", 
+      foco: "Estratégias extrajudiciais e judiciais para recuperação de inadimplência, com respeito aos condôminos", 
+      resultado: "Recuperação rápida de cotas atrasadas" 
+    },
+    { 
+      num: "3", 
+      title: "Mediação e Resolução Ágil", 
+      foco: "Solução de conflitos de vizinhança, participação em assembleias e defesa em ações judiciais", 
+      resultado: "Proteção jurídica ao síndico contra responsabilidades pessoais" 
+    },
+  ];
+
   return (
-    <section className="relative py-20 md:py-28 bg-primary overflow-hidden">
-      {/* Overlay escuro elegante */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/95" />
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Imagem de fundo - mesma do hero */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      
+      {/* Overlay bem suave - igual ao hero section */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/15 to-background/20" />
 
       <div className="container relative z-10 mx-auto px-6 max-w-7xl">
 
-        {/* TÍTULO PRINCIPAL */}
+        {/* TÍTULO PRINCIPAL - Estilo igual ao hero */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-semibold text-foreground leading-tight">
-            O Método Assessoria Condominial Blindada
-          </h2>
-          <p className="mt-4 text-lg md:text-xl text-foreground/80 leading-relaxed max-w-4xl mx-auto">
-            É o sistema proprietário da <span className="text-accent font-medium">Rocio Advocacia</span> que transforma a rotina caótica em gestão previsível e harmoniosa.
-          </p>
-        </div>
-
-        {/* BLOCO 1: NOSSA VISÃO */}
-        <div className="mb-12">
-          <Card className="bg-card/80 backdrop-blur-sm border border-accent/20 h-full max-w-4xl mx-auto">
-            <CardContent className="p-6 md:p-8 h-full flex items-center justify-center">
-              <p className="text-lg md:text-xl text-accent font-medium leading-relaxed text-center">
-                Nosso Método é como um guardião jurídico acompanhando o dia a dia do condomínio — cada etapa com base legal sólida, evitando conflitos e protegendo todos os envolvidos.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* BLOCO 2: TABELA DESKTOP */}
-        <div className="mb-12 hidden md:block">
-          <div className="overflow-hidden rounded-md border border-accent/20 backdrop-blur-sm max-w-4xl mx-auto h-full">
-            <table className="w-full h-full">
-              <thead>
-                <tr className="bg-accent text-accent-foreground">
-                  <th className="px-6 py-5 text-left text-base font-semibold">Pilares do Método</th>
-                  <th className="px-6 py-5 text-left text-base font-semibold border-x border-accent-foreground/20">Foco Estratégico</th>
-                  <th className="px-6 py-5 text-left text-base font-semibold">Resultado para Seu Condomínio</th>
-                </tr>
-              </thead>
-              <tbody className="bg-card/80">
-                <tr className="border-b border-border transition-colors duration-200 hover:bg-muted/30">
-                  <td className="px-6 py-8 border-r border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 bg-accent rounded-full flex items-center justify-center font-semibold text-base text-accent-foreground">1</div>
-                      <span className="text-base font-medium text-foreground">Assessoria Preventiva</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-8 text-foreground/80 border-r border-border">Orientação diária ao síndico, revisão de convenções e regimentos internos para evitar litígios</td>
-                  <td className="px-6 py-8 text-accent font-medium">Redução de até 80% em ações judiciais desnecessárias</td>
-                </tr>
-                <tr className="border-b border-border transition-colors duration-200 hover:bg-muted/30">
-                  <td className="px-6 py-8 border-r border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 bg-accent rounded-full flex items-center justify-center font-semibold text-base text-accent-foreground">2</div>
-                      <span className="text-base font-medium text-foreground">Cobrança Eficiente</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-8 text-foreground/80 border-r border-border">Estratégias extrajudiciais e judiciais para recuperação de inadimplência, com respeito aos condôminos</td>
-                  <td className="px-6 py-8 text-accent font-medium">Recuperação rápida de cotas atrasadas</td>
-                </tr>
-                <tr className="transition-colors duration-200 hover:bg-muted/30">
-                  <td className="px-6 py-8 border-r border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 bg-accent rounded-full flex items-center justify-center font-semibold text-base text-accent-foreground">3</div>
-                      <span className="text-base font-medium text-foreground">Mediação e Resolução Ágil</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-8 text-foreground/80 border-r border-border">Solução de conflitos de vizinhança, participação em assembleias e defesa em ações judiciais</td>
-                  <td className="px-6 py-8 text-accent font-medium">Proteção jurídica ao síndico contra responsabilidades pessoais</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-3 lg:mb-4 text-foreground">
+              O Método Assessoria Condominial Blindada
+            </h2>
+            <p className="text-base lg:text-lg text-foreground/90 leading-relaxed">
+              É o sistema proprietário da <span className="text-accent font-medium">Rocio Advocacia</span> que transforma a rotina caótica em gestão previsível e harmoniosa.
+            </p>
           </div>
         </div>
 
-        {/* CARDS MOBILE */}
-        <div className="md:hidden space-y-5 mb-12">
-          {[
-            { num: "1", title: "Assessoria Preventiva", foco: "Orientação diária ao síndico, revisão de convenções e regimentos internos", resultado: "Redução de até 80% em ações judiciais" },
-            { num: "2", title: "Cobrança Eficiente", foco: "Estratégias extrajudiciais e judiciais para recuperação de inadimplência", resultado: "Recuperação rápida de cotas atrasadas" },
-            { num: "3", title: "Mediação e Resolução Ágil", foco: "Solução de conflitos de vizinhança e defesa em ações judiciais", resultado: "Proteção jurídica ao síndico" },
-          ].map((pilar) => (
-            <Card key={pilar.num} className="bg-card/80 backdrop-blur-sm border border-accent/20">
-              <CardContent className="p-5">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center font-semibold text-lg text-accent-foreground">
-                    {pilar.num}
+        {/* BLOCO 1: NOSSA VISÃO - Estilo igual ao hero */}
+        <div className="mb-12">
+          <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-accent font-medium leading-relaxed text-center">
+              Nosso Método é como um guardião jurídico acompanhando o dia a dia do condomínio — cada etapa com base legal sólida, evitando conflitos e protegendo todos os envolvidos.
+            </p>
+          </div>
+        </div>
+
+        {/* BLOCO 2: TABELA DESKTOP - Estilo igual ao hero */}
+        <div className="mb-12 hidden md:block">
+          <div className="bg-primary-light/60 backdrop-blur-sm rounded-md border border-border/30 max-w-4xl mx-auto overflow-hidden">
+            <div className="bg-accent/90 text-accent-foreground p-4">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-base font-semibold px-4">Pilares do Método</div>
+                <div className="text-base font-semibold px-4 border-x border-accent-foreground/20">Foco Estratégico</div>
+                <div className="text-base font-semibold px-4">Resultado para Seu Condomínio</div>
+              </div>
+            </div>
+            
+            <div className="divide-y divide-border/30">
+              {pilares.map((pilar) => (
+                <div key={pilar.num} className="p-6 transition-colors duration-200 hover:bg-primary/30">
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="px-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 bg-accent rounded-full flex items-center justify-center font-semibold text-base text-accent-foreground">{pilar.num}</div>
+                        <span className="text-base font-medium text-foreground">{pilar.title}</span>
+                      </div>
+                    </div>
+                    <div className="px-4 border-x border-border/30 text-foreground/90">
+                      {pilar.foco}
+                    </div>
+                    <div className="px-4 text-accent font-medium">
+                      {pilar.resultado}
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground">{pilar.title}</h3>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-foreground/80 text-sm"><span className="text-accent font-medium">Foco:</span> {pilar.foco}</p>
-                  <p className="text-accent font-medium text-sm"><span className="font-medium">Resultado:</span> {pilar.resultado}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* CARDS MOBILE - Estilo igual ao hero */}
+        <div className="md:hidden space-y-5 mb-12">
+          {pilares.map((pilar) => (
+            <div key={pilar.num} className="bg-primary-light/60 backdrop-blur-sm rounded-md border border-border/30 p-5">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center font-semibold text-lg text-accent-foreground">
+                  {pilar.num}
                 </div>
-              </CardContent>
-            </Card>
+                <h3 className="text-lg font-semibold text-foreground">{pilar.title}</h3>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-accent font-medium text-sm mb-1">Foco Estratégico:</p>
+                  <p className="text-foreground/90 text-sm">{pilar.foco}</p>
+                </div>
+                <div>
+                  <p className="text-accent font-medium text-sm mb-1">Resultado para Seu Condomínio:</p>
+                  <p className="text-foreground/90 text-sm">{pilar.resultado}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* BLOCO 3: CONFIANÇA E DEPOIMENTO */}
+        {/* BLOCO 3: CONFIANÇA E DEPOIMENTO - Estilo igual ao hero */}
         <div className="mt-16">
-          <Card className="bg-card/80 backdrop-blur-sm border border-accent/30 rounded-md h-full max-w-4xl mx-auto">
-            <CardContent className="p-8 md:p-10 h-full flex flex-col justify-center">
-              <div className="flex items-center gap-4 justify-center mb-5">
-                <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Building2 className="w-7 h-7 text-accent" />
-                </div>
-                <h3 className="text-2xl md:text-3xl font-semibold text-accent leading-tight">
-                  Mais de 10 Anos Construindo Harmonia em Condomínios
-                </h3>
+          <div className="bg-primary-light/60 backdrop-blur-sm rounded-md border border-border/30 h-full max-w-4xl mx-auto p-6 lg:p-8">
+            <div className="flex items-center gap-4 justify-center mb-5">
+              <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Building2 className="w-7 h-7 text-accent" />
               </div>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-accent leading-tight">
+                Mais de 10 Anos Construindo Harmonia em Condomínios
+              </h3>
+            </div>
 
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed text-center max-w-3xl mx-auto">
-                A Rocio Advocacia possui uma década de excelência comprovada em Direito Condominial, com equipe especializada pronta para transformar desafios cotidianos em gestão serena e eficiente.
-              </p>
+            <p className="text-base md:text-lg text-foreground/90 leading-relaxed text-center max-w-3xl mx-auto mb-6">
+              A Rocio Advocacia possui uma década de excelência comprovada em Direito Condominial, com equipe especializada pronta para transformar desafios cotidianos em gestão serena e eficiente.
+            </p>
 
-              {/* Depoimento em destaque */}
-              <div className="mt-6 pt-5 border-t border-border">
-                <div className="bg-accent/10 border border-accent/30 rounded-lg p-6">
-                  <Quote className="w-8 h-8 text-accent mb-3" />
-                  <p className="text-base md:text-lg italic text-foreground leading-relaxed">
-                    "Com uma assessoria jurídica especializada, cada decisão é tomada com segurança. Não há surpresas quando se trabalha com previsibilidade condominial."
-                  </p>
-                </div>
+            {/* Depoimento em destaque */}
+            <div className="pt-5 border-t border-border/30">
+              <div className="bg-accent/10 border border-accent/30 rounded-lg p-6">
+                <Quote className="w-8 h-8 text-accent mb-3" />
+                <p className="text-base md:text-lg italic text-foreground leading-relaxed">
+                  "Com uma assessoria jurídica especializada, cada decisão é tomada com segurança. Não há surpresas quando se trabalha com previsibilidade condominial."
+                </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
 
       </div>
