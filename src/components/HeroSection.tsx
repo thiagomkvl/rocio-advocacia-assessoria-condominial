@@ -48,7 +48,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       </div>
       <div className={`space-y-2 ${isMobile ? "space-y-4" : "lg:space-y-3"}`}>
         <Label className={`font-medium text-foreground/90 ${radioTextClasses}`}>
-          Qual o perfil principal do seu condomínio?
+          Qual área seu condomínio precisa de orientação jurídica?
         </Label>
         <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required>
           <div className="flex items-center space-x-2">
