@@ -5,11 +5,38 @@ import logo from "@/assets/logo-rocio.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    setIsMenuOpen(false);
+    
+    setTimeout(() => {
+      if (sectionId === "inicio") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      
+      // Encontra o elemento pelo ID
+      const element = document.getElementById(sectionId);
+      
+      if (element) {
+        const offset = 80; // Altura do header
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+      } else {
+        console.warn(`Elemento com ID "${sectionId}" não encontrado`);
+      }
+    }, 100);
+  };
+
   const navLinks = [
-    { name: "Início", href: "#inicio" },
-    { name: "Sobre Nós", href: "#sobre" },
-    { name: "Serviços", href: "#servicos" },
-    { name: "Contato", href: "#contato" },
+    { name: "Início", target: "inicio" },
+    { name: "Sobre Nós", target: "sobre-nos" }, // ID do MethodSection
+    { name: "Serviços", target: "servicos" }, // ID do HeroSection
+    { name: "Contato", target: "contato" }, // ID do HeroSection/ClosingSection
   ];
 
   return (
@@ -19,24 +46,27 @@ const Header = () => {
           {/* Bloco esquerdo: Logo + Menu desktop (alinhado à esquerda) */}
           <div className="flex items-center">
             {/* Logo */}
-            <a href="#inicio" className="flex-shrink-0 mr-16">
+            <button 
+              onClick={() => scrollToSection("inicio")}
+              className="flex-shrink-0 mr-16"
+            >
               <img
                 src={logo}
                 alt="Rocio Advocacia"
                 className="h-14 w-auto"
               />
-            </a>
+            </button>
 
             {/* Menu desktop */}
             <nav className="hidden lg:flex items-center gap-10">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
+                  onClick={() => scrollToSection(link.target)}
                   className="text-primary-foreground/80 hover:text-gold transition-colors text-sm uppercase tracking-wider"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
             </nav>
           </div>
@@ -54,12 +84,12 @@ const Header = () => {
                 <Linkedin size={18} />
               </a>
             </div>
-            <a
-              href="#contato"
+            <button
+              onClick={() => scrollToSection("contato")}
               className="bg-gold hover:bg-gold-dark text-dark px-6 py-2.5 rounded text-sm font-semibold transition-all hover:scale-105"
             >
               Consulta Online
-            </a>
+            </button>
           </div>
 
           {/* Botão mobile */}
@@ -76,22 +106,20 @@ const Header = () => {
           <div className="lg:hidden py-6 border-t border-gold/10 animate-fade-in">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="text-primary-foreground/80 hover:text-gold transition-colors text-sm uppercase tracking-wider py-2"
+                  onClick={() => scrollToSection(link.target)}
+                  className="text-primary-foreground/80 hover:text-gold transition-colors text-sm uppercase tracking-wider py-2 text-left"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
-              <a
-                href="#contato"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => scrollToSection("contato")}
                 className="bg-gold hover:bg-gold-dark text-dark px-6 py-3 rounded text-sm font-semibold transition-colors mt-4 text-center"
               >
                 Consulta Online
-              </a>
+              </button>
             </nav>
           </div>
         )}
