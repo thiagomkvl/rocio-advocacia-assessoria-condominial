@@ -47,29 +47,29 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
         />
       </div>
       <div className={`space-y-3 ${isMobile ? "space-y-3" : "space-y-3"}`}>
-        <Label className={`font-medium text-foreground/90 ${radioTextClasses}`}>
+        <Label className={`font-medium text-foreground/90 ${radioTextClasses} block text-left`}>
           Qual o perfil principal do seu condomínio?
         </Label>
         <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required className="space-y-3">
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Assembleias e Decisões</Label>
+            <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Assembleias e Decisões</Label>
           </div>
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="Inadimplência e cobrança" id="p2" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Inadimplência e cobrança</Label>
+            <Label htmlFor="p2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Inadimplência e cobrança</Label>
           </div>
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="Conflitos entre moradores" id="p3" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Conflitos entre moradores</Label>
+            <Label htmlFor="p3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Conflitos entre moradores</Label>
           </div>
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="Multas e notificações" id="p4" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Multas e notificações</Label>
+            <Label htmlFor="p4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Multas e notificações</Label>
           </div>
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="Outro" id="p5" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p5" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Outro</Label>
+            <Label htmlFor="p5" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Outro</Label>
           </div>
         </RadioGroup>
       </div>
@@ -99,25 +99,25 @@ const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+              <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
                 <strong className="text-foreground">Mapeamento de Riscos:</strong> Identificação imediata de fragilidades em convenções, inadimplência, multas e responsabilidades do síndico.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+              <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
                 <strong className="text-foreground">Análise de Conformidade:</strong> Parecer técnico sobre regras internas e legislação aplicável ao condomínio.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Users className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+              <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
                 <strong className="text-foreground">Gestão de Conflitos:</strong> Avaliação de situações problemáticas entre moradores e estratégias para resolução pacífica.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Gift className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+              <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
                 <strong className="text-foreground">BÔNUS Exclusivo:</strong> Relatório Personalizado com Plano de Ação Prioritário para o seu condomínio.
               </span>
             </li>
@@ -184,7 +184,7 @@ export const HeroSection = () => {
       <div className="relative z-10">
         <div className="sm:hidden py-16 px-4">
           <div className="animate-fade-in text-center">
-            <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground">
+            <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground pt-8">
               Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
             </h1>
             <p className="text-base text-foreground/80 mb-10 leading-relaxed">
@@ -209,7 +209,7 @@ export const HeroSection = () => {
 
         <div className="hidden sm:block py-16 md:py-20 lg:py-24 px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch min-h-[calc(100vh-80px)] items-center">
               <div className="lg:w-1/2 animate-fade-in">
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
                   <div className="mb-6">
@@ -228,17 +228,17 @@ export const HeroSection = () => {
                     </h3>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
-                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
                           <strong className="text-foreground">Assessoria Preventiva:</strong> Orientação diária ao síndico, revisão de convenções e regimentos internos para evitar litígios e garantir conformidade legal.
                         </p>
                       </div>
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
-                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
                           <strong className="text-foreground">Cobrança Eficiente:</strong> Estratégias extrajudiciais e judiciais para recuperação de inadimplência, com respeito aos condôminos e máxima eficácia.
                         </p>
                       </div>
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
-                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
                           <strong className="text-foreground">Mediação e Resolução Ágil:</strong> Solução de conflitos de vizinhança, participação em assembleias e defesa em ações judiciais condominiais.
                         </p>
                       </div>
@@ -253,19 +253,19 @@ export const HeroSection = () => {
                     <div className="grid grid-cols-1 gap-2">
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/90">
+                        <span className="text-sm text-foreground/90 text-left">
                           <strong className="text-foreground">Redução de até 80% em ações judiciais desnecessárias</strong>
                         </span>
                       </div>
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/90">
+                        <span className="text-sm text-foreground/90 text-left">
                           <strong className="text-foreground">Recuperação rápida de cotas atrasadas</strong>
                         </span>
                       </div>
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-foreground/90">
+                        <span className="text-sm text-foreground/90 text-left">
                           <strong className="text-foreground">Proteção jurídica ao síndico contra responsabilidades pessoais</strong>
                         </span>
                       </div>
