@@ -92,7 +92,7 @@ const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-5">
             <Shield className={`${iconSize} text-accent`} />
-            <h3 className={`font-semibold ${isMobile ? "text-base" : "text-lg"} text-foreground`}>
+            <h3 className={`font-semibold ${isMobile ? "text-base" : "text-lg"} text-foreground text-left`}>
               Diagnóstico Jurídico Condominial
             </h3>
           </div>
@@ -183,13 +183,17 @@ export const HeroSection = () => {
 
       <div className="relative z-10">
         <div className="sm:hidden py-16 px-4">
-          <div className="animate-fade-in text-center">
-            <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground pt-8">
+          <div className="animate-fade-in">
+            {/* Título alinhado à esquerda */}
+            <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground pt-8 text-left">
               Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
             </h1>
-            <p className="text-base text-foreground/80 mb-10 leading-relaxed">
-              Transformamos conflitos e incertezas em Harmonia e Previsibilidade com o Assessoria Jurídica Condominial.
+            
+            {/* Subtítulo alinhado à esquerda */}
+            <p className="text-base text-foreground/80 mb-10 leading-relaxed text-left">
+              Transformamos conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
             </p>
+            
             <Button
               size="lg"
               onClick={() => window.open("https://wa.me/5598992252729", "_blank")}
@@ -198,9 +202,11 @@ export const HeroSection = () => {
               <Phone className="mr-2 w-6 h-6" />
               FALAR COM ESPECIALISTA
             </Button>
+            
             <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-2xl border-b border-accent/30 w-full text-center">
               <h2 className="text-xl font-semibold mb-2 text-foreground font-sans tracking-wide uppercase">DIAGNÓSTICO ESTRATÉGICO</h2>
             </div>
+            
             <div className="w-full">
               <FormCard formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} isMobile={true} />
             </div>
@@ -213,16 +219,16 @@ export const HeroSection = () => {
               <div className="lg:w-1/2 animate-fade-in">
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
                   <div className="mb-6">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4 text-foreground">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4 text-foreground text-left">
                       Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
                     </h1>
-                    <p className="text-base lg:text-lg text-foreground/80 leading-relaxed">
+                    <p className="text-base lg:text-lg text-foreground/80 leading-relaxed text-left">
                       Transformamos conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
                     </p>
                   </div>
                   
                   <div className="mb-7">
-                    <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center">
+                    <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center text-left">
                       <Building2 className="w-5 h-5 mr-2 text-accent" />
                       Três Pilares Para a Tranquilidade do Seu Condomínio:
                     </h3>
@@ -246,7 +252,7 @@ export const HeroSection = () => {
                   </div>
                   
                   <div className="mb-7">
-                    <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center">
+                    <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center text-left">
                       <FileCheck className="w-5 h-5 mr-2 text-accent" />
                       Resultados para Seu Condomínio:
                     </h3>
