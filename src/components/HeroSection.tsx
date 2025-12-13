@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Phone, Building2, FileCheck, Gift, Shield, Users } from "lucide-react";
+import { CheckCircle2, Phone, Building2, FileCheck, Gift, Shield, FileText } from "lucide-react";
 import { toast } from "sonner";
 
 import heroBg from "@/assets/hero-bg.jpg";
@@ -29,7 +29,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       <div>
         <Input
           type="email"
-          placeholder="E-mail"
+          placeholder="E-mail Corporativo"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
@@ -48,24 +48,24 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       </div>
       <div className={`space-y-3 ${isMobile ? "space-y-3" : "space-y-3"}`}>
         <Label className={`font-medium text-foreground/90 ${radioTextClasses} block text-left`}>
-          Onde seu condomínio mais precisa de auxílio jurídico?
+          Qual a fase atual do seu empreendimento?
         </Label>
         <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required className="space-y-3">
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Assembleias e Decisões</Label>
+            <RadioGroupItem value="Incorporação" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Incorporação</Label>
           </div>
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="Inadimplência e cobrança" id="p2" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Inadimplência e cobrança</Label>
+            <RadioGroupItem value="Lançamento" id="p2" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Lançamento</Label>
           </div>
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="Conflitos entre moradores" id="p3" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Conflitos entre moradores</Label>
+            <RadioGroupItem value="Obra em Andamento" id="p3" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Obra em Andamento</Label>
           </div>
           <div className="flex items-center space-x-3">
-            <RadioGroupItem value="Multas e notificações" id="p4" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Multas e notificações</Label>
+            <RadioGroupItem value="Pós-Entrega" id="p4" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses} text-left`}>Pós-Entrega</Label>
           </div>
           <div className="flex items-center space-x-3">
             <RadioGroupItem value="Outro" id="p5" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
@@ -93,32 +93,32 @@ const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
           <div className="flex items-center gap-2 mb-5">
             <Shield className={`${iconSize} text-accent`} />
             <h3 className={`font-semibold ${isMobile ? "text-base" : "text-lg"} text-foreground text-left`}>
-              Diagnóstico Jurídico Condominial
+              Primeiros Passos para a Blindagem
             </h3>
           </div>
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
               <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
-                <strong className="text-foreground">Mapeamento de Riscos:</strong> Identificação imediata de fragilidades em convenções, inadimplência, multas e responsabilidades do síndico.
+                <strong className="text-foreground">Mapeamento de Riscos Técnico-Jurídicos:</strong> Identificação imediata de fragilidades em contratos, registros, licenças e projetos executivos.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
               <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
-                <strong className="text-foreground">Análise de Conformidade:</strong> Parecer técnico sobre regras internas e legislação aplicável ao condomínio.
+                <strong className="text-foreground">Parecer de Conformidade da Obra:</strong> Análise técnica e legal sobre o andamento do empreendimento em relação às normas municipais, estaduais e do corpo de bombeiros.
               </span>
             </li>
             <li className="flex items-start gap-3">
-              <Users className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
+              <FileText className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
               <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
-                <strong className="text-foreground">Gestão de Conflitos:</strong> Avaliação de situações problemáticas entre moradores e estratégias para resolução pacífica.
+                <strong className="text-foreground">Revisão de Contratos e Documentação:</strong> Avaliação completa da documentação do empreendimento, incluindo contratos com fornecedores, compromissos de compra e venda, e garantias legais.
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Gift className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
               <span className={`${textSize} text-foreground/90 leading-relaxed text-left`}>
-                <strong className="text-foreground">BÔNUS Exclusivo:</strong> Relatório Personalizado com Plano de Ação Prioritário para o seu condomínio.
+                <strong className="text-foreground">BÔNUS Exclusivo:</strong> Relatório de Blindagem Patrimonial Personalizado com plano de ação para regularização e mitigação de riscos.
               </span>
             </li>
           </ul>
@@ -173,7 +173,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section id="inicio" className="relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -186,12 +186,12 @@ export const HeroSection = () => {
           <div className="animate-fade-in">
             {/* Título alinhado à esquerda */}
             <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground pt-8 text-left">
-              Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
+              Descubra Como Aumentar a Segurança Jurídica do seu Empreendimento
             </h1>
             
             {/* Subtítulo alinhado à esquerda */}
             <p className="text-base text-foreground/80 mb-10 leading-relaxed text-left">
-              Transformamos conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
+              Proteção jurídica, estabilidade e previsibilidade <strong className="text-accent">para seu empreendimento</strong> com a nossa metodologia especializada.
             </p>
             
             <Button
@@ -220,32 +220,32 @@ export const HeroSection = () => {
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
                   <div className="mb-6">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4 text-foreground text-left">
-                      Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
+                      Descubra Como Aumentar a Segurança Jurídica do seu Empreendimento
                     </h1>
                     <p className="text-base lg:text-lg text-foreground/80 leading-relaxed text-left">
-                      Transformamos conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
+                      Proteção jurídica, estabilidade e previsibilidade <strong className="text-accent">para seu empreendimento</strong> com a nossa metodologia especializada.
                     </p>
                   </div>
                   
-                  <div className="mb-7">
+                  <div id="servicos" className="mb-7">
                     <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center text-left">
                       <Building2 className="w-5 h-5 mr-2 text-accent" />
-                      Três Pilares Para a Tranquilidade do Seu Condomínio:
+                      Os 3 Pilares da Segurança Jurídica para Construtoras:
                     </h3>
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
                         <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
-                          <strong className="text-foreground">Assessoria Preventiva:</strong> Orientação contínua ao síndico, revisão de convenções e regimentos internos para evitar litígios e garantir conformidade legal.
+                          <strong className="text-foreground">Governança do Projeto:</strong> Assessoria jurídica integrada desde o planejamento, com análise de viabilidade, elaboração de contratos blindados (promessa de compra e venda, CCRU) e acompanhamento de todo o licenciamento.
                         </p>
                       </div>
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
                         <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
-                          <strong className="text-foreground">Cobrança Eficiente:</strong> Estratégias extrajudiciais e judiciais para recuperação de inadimplência, com respeito aos condôminos e máxima eficácia.
+                          <strong className="text-foreground">Conformidade da Obra:</strong> Garantia de que a execução do projeto atende a todas as normas técnicas, de segurança e legais, prevenindo autuações, embargos e responsabilidades futuras.
                         </p>
                       </div>
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
                         <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
-                          <strong className="text-foreground">Mediação e Resolução Ágil:</strong> Solução de conflitos de vizinhança, participação em assembleias e defesa em ações judiciais condominiais.
+                          <strong className="text-foreground">Transição Segura e Defesa:</strong> Gestão jurídica da entrega das unidades, constituição do condomínio e defesa proativa em eventuais disputas, protegendo o patrimônio e a reputação da sua empresa.
                         </p>
                       </div>
                     </div>
@@ -254,25 +254,25 @@ export const HeroSection = () => {
                   <div className="mb-7">
                     <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center text-left">
                       <FileCheck className="w-5 h-5 mr-2 text-accent" />
-                      Resultados para Seu Condomínio:
+                      Resultados para Sua Construtora:
                     </h3>
                     <div className="grid grid-cols-1 gap-2">
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90 text-left">
-                          <strong className="text-foreground">Redução de ações judiciais desnecessárias</strong>
+                          <strong className="text-foreground">Aceleração do Licenciamento e da Obra</strong>
                         </span>
                       </div>
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90 text-left">
-                          <strong className="text-foreground">Recuperação de contas atrasadas</strong>
+                          <strong className="text-foreground">Contratos à Prova de Contestações</strong>
                         </span>
                       </div>
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90 text-left">
-                          <strong className="text-foreground">Proteção jurídica</strong>
+                          <strong className="text-foreground">Prevenção de Autuações e Embargos</strong>
                         </span>
                       </div>
                     </div>
@@ -295,7 +295,7 @@ export const HeroSection = () => {
                 </div>
               </div>
               
-              <div className="lg:w-1/2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div id="contato" className="lg:w-1/2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <div className="h-full flex flex-col">
                   <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-md border-b border-accent/30 w-full text-center">
                     <h2 className="text-xl font-semibold mb-1 text-foreground font-sans tracking-wide uppercase">DIAGNÓSTICO ESTRATÉGICO</h2>
