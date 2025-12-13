@@ -185,10 +185,10 @@ export const HeroSection = () => {
         <div className="sm:hidden py-16 px-4">
           <div className="animate-fade-in text-center">
             <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground pt-8">
-              Descubra Soluções Jurídicas Especializadas que Transformam os Desafios do seu Condomínio em Gestão Previsível e Harmoniosa
+              Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
             </h1>
             <p className="text-base text-foreground/80 mb-10 leading-relaxed">
-              A Rocio Advocacia transforma conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Método Assessoria Condominial Blindada.
+              A Rocio Advocacia transforma conflitos e incertezas em Harmonia e Previsibilidade com o Método Assessoria Condominial Blindada.
             </p>
             <Button
               size="lg"
@@ -214,7 +214,7 @@ export const HeroSection = () => {
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
                   <div className="mb-6">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4 text-foreground">
-                      Descubra Soluções Jurídicas Especializadas que Transformam os Desafios do seu Condomínio em Gestão Previsível e Harmoniosa
+                      Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
                     </h1>
                     <p className="text-base lg:text-lg text-foreground/80 leading-relaxed">
                       A Rocio Advocacia transforma conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Método Assessoria Condominial Blindada.
