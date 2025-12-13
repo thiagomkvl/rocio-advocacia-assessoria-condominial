@@ -260,13 +260,13 @@ export const HeroSection = () => {
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90 text-left">
-                          <strong className="text-foreground">Recuperação rápida de cotas atrasadas</strong>
+                          <strong className="text-foreground">Recuperação de contas atrasadas</strong>
                         </span>
                       </div>
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90 text-left">
-                          <strong className="text-foreground">Proteção jurídica ao síndico contra responsabilidades pessoais</strong>
+                          <strong className="text-foreground">Proteção jurídica</strong>
                         </span>
                       </div>
                     </div>
