@@ -7,8 +7,8 @@ export const MethodSection = () => {
     { 
       num: "1", 
       title: "Assessoria Preventiva", 
-      foco: "Orientação diária ao síndico, revisão de convenções e regimentos internos para evitar litígios", 
-      resultado: "Redução de até 80% em ações judiciais desnecessárias" 
+      foco: "Orientação contínua ao síndico, revisão de convenções e regimentos internos para evitar litígios", 
+      resultado: "Eliminação de ações judiciais desnecessárias" 
     },
     { 
       num: "2", 
@@ -41,10 +41,10 @@ export const MethodSection = () => {
         <div className="text-center mb-12">
           <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-3 lg:mb-4 text-foreground">
-              O Método Assessoria Condominial Blindada
+              Assessoria Jurídica Condominial
             </h2>
             <p className="text-base lg:text-lg text-foreground/90 leading-relaxed">
-              É o sistema proprietário da <span className="text-accent font-medium">Rocio Advocacia</span> que transforma a rotina caótica em gestão previsível e harmoniosa.
+              Realizamos o diagnóstico e manutenção <span className="text-accent font-medium">da segurança jurídica condominial</span>
             </p>
           </div>
         </div>
