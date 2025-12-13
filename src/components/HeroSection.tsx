@@ -214,10 +214,10 @@ export const HeroSection = () => {
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
                   <div className="mb-6">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4 text-foreground">
-                      Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
+                      Aumente a Tranquilidade e Segurança Jurídica do Seu Condomínio
                     </h1>
                     <p className="text-base lg:text-lg text-foreground/80 leading-relaxed">
-                      A Rocio Advocacia transforma conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Método Assessoria Condominial Blindada.
+                      A Rocio Advocacia transforma conflitos e incertezas em <strong className="text-accent">Harmonia e Previsibilidade</strong> com o Assessoria Jurídica Condominial.
                     </p>
                   </div>
                   
@@ -229,7 +229,7 @@ export const HeroSection = () => {
                     <div className="grid grid-cols-1 gap-3">
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
                         <p className="text-sm md:text-base text-foreground/90 leading-relaxed text-left">
-                          <strong className="text-foreground">Assessoria Preventiva:</strong> Orientação diária ao síndico, revisão de convenções e regimentos internos para evitar litígios e garantir conformidade legal.
+                          <strong className="text-foreground">Assessoria Preventiva:</strong> Orientação contínua ao síndico, revisão de convenções e regimentos internos para evitar litígios e garantir conformidade legal.
                         </p>
                       </div>
                       <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
@@ -254,7 +254,7 @@ export const HeroSection = () => {
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90 text-left">
-                          <strong className="text-foreground">Redução de até 80% em ações judiciais desnecessárias</strong>
+                          <strong className="text-foreground">Redução de ações judiciais desnecessárias</strong>
                         </span>
                       </div>
                       <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
