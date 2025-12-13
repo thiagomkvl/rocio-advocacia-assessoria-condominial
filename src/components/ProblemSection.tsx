@@ -9,10 +9,10 @@ export const ProblemSection = () => {
         {/* TÍTULO PRINCIPAL */}
         <div className="max-w-5xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-semibold text-foreground leading-tight">
-            Por que síndicos e condomínios perdem tempo e dinheiro por falta de Assessoria Jurídica Estratégica?
+            Por que condomínios perdem tempo e dinheiro por falta de Assessoria Jurídica?
           </h2>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-            A ausência de orientação jurídica preventiva expõe síndicos a responsabilidades pessoais e condomínios a conflitos prolongados, multas indevidas e inadimplência crônica, gerando <strong className="text-foreground">estresse e prejuízos irreparáveis</strong>.
+            A ausência de orientação jurídica expõe condomínios a conflitos prolongados, multas indevidas e inadimplência crônica, gerando <strong className="text-foreground">estresse e prejuízos irreparáveis</strong>.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export const ProblemSection = () => {
                 </h3>
               </div>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Estruturamos assessoria mensal preventiva que evita erros, acelera soluções e protege o síndico, eliminando riscos de ações judiciais caras e demoradas.
+                Estruturamos uma assessoria que evita erros, acelera soluções e protege o condomínio, reduzindo riscos de ações judiciais.
               </p>
             </CardContent>
           </Card>
@@ -57,7 +57,7 @@ export const ProblemSection = () => {
         {/* CICLO DA INSEGURANÇA CONDOMINIAL */}
         <div className="text-center mb-12">
           <h3 className="text-2xl md:text-4xl font-semibold text-foreground">
-            O Ciclo da Insegurança Condominial resulta em:
+            O Ciclo da Insegurança Jurídica Condominial resulta em:
           </h3>
         </div>
 
