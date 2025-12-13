@@ -14,7 +14,7 @@ export const MethodSection = () => {
       num: "2", 
       title: "Cobrança Eficiente", 
       foco: "Estratégias extrajudiciais e judiciais para recuperação de inadimplência, com respeito aos condôminos", 
-      resultado: "Recuperação rápida de cotas atrasadas" 
+      resultado: "Aumento do fluxo de caixa do condomínio" 
     },
     { 
       num: "3", 
