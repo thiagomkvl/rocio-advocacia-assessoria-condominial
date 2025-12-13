@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Phone, Building2, FileCheck, Gift } from "lucide-react";
+import { CheckCircle2, Phone, Building2, FileCheck, Gift, Shield, FileText } from "lucide-react";
 import { toast } from "sonner";
 
 import heroBg from "@/assets/hero-bg.jpg";
@@ -12,10 +12,10 @@ import heroBg from "@/assets/hero-bg.jpg";
 const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycby8cT4P-Yz8i1nAy1KlDDWtG2Fbm7swaZTlZFPw-JgM1Dq5kncsn8Gfxbl11DcEvToA/exec";
 
 const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
-  const inputClasses = isMobile ? "h-12 text-base" : "h-14 text-lg";
-  const radioTextClasses = isMobile ? "text-base" : "text-lg";
+  const inputClasses = isMobile ? "h-12 text-base" : "h-12 text-base";
+  const radioTextClasses = isMobile ? "text-base" : "text-base";
   return (
-    <form onSubmit={handleSubmit} className={`space-y-4 ${isMobile ? "space-y-6" : "lg:space-y-5"}`}>
+    <form onSubmit={handleSubmit} className={`space-y-5 ${isMobile ? "space-y-5" : "space-y-5"}`}>
       <div>
         <Input
           type="text"
@@ -29,7 +29,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       <div>
         <Input
           type="email"
-          placeholder="E-mail"
+          placeholder="E-mail Corporativo"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
@@ -46,28 +46,28 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
           className={`${inputClasses} bg-muted border-border focus:border-accent focus:ring-accent/20 rounded-lg`}
         />
       </div>
-      <div className={`space-y-2 ${isMobile ? "space-y-4" : "lg:space-y-3"}`}>
+      <div className={`space-y-3 ${isMobile ? "space-y-3" : "space-y-3"}`}>
         <Label className={`font-medium text-foreground/90 ${radioTextClasses}`}>
-          Qual área seu condomínio precisa de orientação jurídica?
+          Qual a fase atual do seu empreendimento?
         </Label>
-        <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Assembleias e Decisões" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Assembleias e Decisões</Label>
+        <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required className="space-y-3">
+          <div className="flex items-center space-x-3">
+            <RadioGroupItem value="Incorporação" id="p1" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p1" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Incorporação</Label>
           </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Inadimplência e cobrança" id="p2" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Inadimplência e cobrança</Label>
+          <div className="flex items-center space-x-3">
+            <RadioGroupItem value="Lançamento" id="p2" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p2" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Lançamento</Label>
           </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Conflitos entre moradores" id="p3" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Conflitos entre moradores</Label>
+          <div className="flex items-center space-x-3">
+            <RadioGroupItem value="Obra em Andamento" id="p3" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p3" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Obra em Andamento</Label>
           </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="Multas e notificações" id="p4" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
-            <Label htmlFor="p4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Multas e notificações</Label>
+          <div className="flex items-center space-x-3">
+            <RadioGroupItem value="Pós-Entrega" id="p4" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
+            <Label htmlFor="p4" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Pós-Entrega</Label>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-3">
             <RadioGroupItem value="Outro" id="p5" className={isMobile ? "w-5 h-5" : "w-5 h-5"} />
             <Label htmlFor="p5" className={`font-normal cursor-pointer text-foreground/80 ${radioTextClasses}`}>Outro</Label>
           </div>
@@ -75,7 +75,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       </div>
       <Button
         type="submit"
-        className={`w-full ${isMobile ? "h-14 text-base" : "h-14 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 rounded-lg`}
+        className={`w-full ${isMobile ? "h-12 text-base" : "h-12 text-base"} font-semibold bg-accent hover:bg-accent/90 text-accent-foreground transition-all duration-300 rounded-lg mt-3`}
       >
         QUERO MEU DIAGNÓSTICO
       </Button>
@@ -84,32 +84,46 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
 };
 
 const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
-  const iconSize = isMobile ? "w-5 h-5" : "w-5 h-5";
-  const textSize = isMobile ? "text-base" : "text-base";
+  const iconSize = isMobile ? "w-4 h-4" : "w-5 h-5";
+  const textSize = isMobile ? "text-sm" : "text-base";
   return (
-    <Card className={`shadow-lg border border-border/50 w-full h-full ${isMobile ? "rounded-2xl" : "rounded-lg"}`}>
-      <CardContent className="pt-6 bg-card text-card-foreground h-full flex flex-col">
-        <ul className="space-y-4 mb-6">
-          <li className="flex items-start gap-3">
-            <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-            <span className={`${textSize} text-foreground/90`}>
-              <strong className="text-foreground">Mapeamento de Riscos:</strong> Identificação imediata de fragilidades em convenções, inadimplência, multas e responsabilidades do síndico.
-            </span>
-          </li>
-          <li className="flex items-start gap-3">
-            <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-            <span className={`${textSize} text-foreground/90`}>
-              <strong className="text-foreground">Análise de Conformidade:</strong> Parecer técnico sobre regras internas e legislação aplicável.
-            </span>
-          </li>
-          <li className="flex items-start gap-3">
-            <Gift className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
-            <span className={`${textSize} text-foreground/90`}>
-              <strong className="text-foreground">BÔNUS Exclusivo:</strong> Relatório Personalizado com Plano de Ação Prioritário para o seu condomínio.
-            </span>
-          </li>
-        </ul>
-        <div className="mt-auto pt-4">
+    <Card className={`shadow-lg border border-border/50 w-full h-full ${isMobile ? "rounded-b-2xl rounded-t-none" : "rounded-lg"}`}>
+      <CardContent className="p-6 md:p-7 bg-card text-card-foreground h-full flex flex-col">
+        <div className="mb-8">
+          <div className="flex items-center gap-2 mb-5">
+            <Shield className={`${iconSize} text-accent`} />
+            <h3 className={`font-semibold ${isMobile ? "text-base" : "text-lg"} text-foreground`}>
+              Primeiros Passos para a Blindagem
+            </h3>
+          </div>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
+              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+                <strong className="text-foreground">Mapeamento de Riscos Técnico-Jurídicos:</strong> Identificação imediata de fragilidades em contratos, registros, licenças e projetos executivos.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <CheckCircle2 className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
+              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+                <strong className="text-foreground">Parecer de Conformidade da Obra:</strong> Análise técnica e legal sobre o andamento do empreendimento em relação às normas municipais, estaduais e do corpo de bombeiros.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <FileText className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
+              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+                <strong className="text-foreground">Revisão de Contratos e Documentação:</strong> Avaliação completa da documentação do empreendimento, incluindo contratos com fornecedores, compromissos de compra e venda, e garantias legais.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Gift className={`${iconSize} text-accent flex-shrink-0 mt-0.5`} />
+              <span className={`${textSize} text-foreground/90 leading-relaxed`}>
+                <strong className="text-foreground">BÔNUS Exclusivo:</strong> Relatório de Blindagem Patrimonial Personalizado com plano de ação para regularização e mitigação de riscos.
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="mt-3">
           <FormContent formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} isMobile={isMobile} />
         </div>
       </CardContent>
@@ -168,13 +182,13 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80 sm:bg-gradient-to-r sm:from-background/80 sm:via-background/60 sm:to-background/80" />
 
       <div className="relative z-10">
-        <div className="sm:hidden pt-32 pb-16 px-4">
+        <div className="sm:hidden py-16 px-4">
           <div className="animate-fade-in text-center">
             <h1 className="text-3xl font-semibold leading-tight mb-6 text-foreground">
-              Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
+              Descubra Como Aumentar a Segurança Jurídica do seu Empreendimento
             </h1>
             <p className="text-base text-foreground/80 mb-10 leading-relaxed">
-              A Rocio Advocacia transforma conflitos e incertezas em Harmonia e Previsibilidade com o Método Assessoria Condominial Blindada.
+              A Rocio Advocacia transforma incerteza em Previsibilidade e Agilidade com o Método Segurança Jurídica Imobiliária.
             </p>
             <Button
               size="lg"
@@ -185,7 +199,7 @@ export const HeroSection = () => {
               FALAR COM ESPECIALISTA
             </Button>
             <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-2xl border-b border-accent/30 w-full text-center">
-              <h2 className="text-xl font-semibold mb-2 text-foreground font-sans tracking-wide uppercase">Diagnóstico Estratégico</h2>
+              <h2 className="text-xl font-semibold mb-2 text-foreground font-sans tracking-wide uppercase">DIAGNÓSTICO ESTRATÉGICO</h2>
             </div>
             <div className="w-full">
               <FormCard formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} isMobile={true} />
@@ -198,49 +212,67 @@ export const HeroSection = () => {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
               <div className="lg:w-1/2 animate-fade-in">
                 <div className="bg-primary-light/60 backdrop-blur-sm p-6 lg:p-7 rounded-md border border-border/30 h-full flex flex-col">
-                  <div className="mb-5 lg:mb-6">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-3 lg:mb-4 text-foreground">
-                      Descubra Como Aumentar a Tranquilidade e Segurança Jurídica do Seu Condomínio
+                  <div className="mb-6">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-4 text-foreground">
+                      Descubra Como Aumentar a Segurança Jurídica do seu Empreendimento
                     </h1>
                     <p className="text-base lg:text-lg text-foreground/80 leading-relaxed">
-                      A Rocio Advocacia transforma conflitos e incertezas em Harmonia e Previsibilidade com o Método Assessoria Condominial Blindada.
+                      A Rocio Advocacia transforma incerteza em <strong className="text-accent">Previsibilidade e Agilidade</strong> com o Método Segurança Jurídica Imobiliária.
                     </p>
                   </div>
-                  <div className="mb-5 lg:mb-6">
-                    <h3 className="text-lg font-semibold mb-3 lg:mb-4 text-foreground flex items-center">
+                  
+                  <div className="mb-7">
+                    <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center">
                       <Building2 className="w-5 h-5 mr-2 text-accent" />
-                      Três Pilares Para a Tranquilidade do Seu Condomínio:
+                      Os 3 Pilares da Segurança Jurídica para Construtoras:
                     </h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      <div className="bg-primary/30 p-3 rounded-lg">
-                        <p className="text-sm text-foreground/90">Assessoria Preventiva: Orientação diária ao síndico, revisão de convenções e regimentos internos para evitar litígios.</p>
+                    <div className="grid grid-cols-1 gap-3">
+                      <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
+                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                          <strong className="text-foreground">Governança do Projeto:</strong> Assessoria jurídica integrada desde o planejamento, com análise de viabilidade, elaboração de contratos blindados (promessa de compra e venda, CCRU) e acompanhamento de todo o licenciamento.
+                        </p>
                       </div>
-                      <div className="bg-primary/30 p-3 rounded-lg">
-                        <p className="text-sm text-foreground/90">Cobrança Eficiente: Estratégias extrajudiciais e judiciais para recuperação de inadimplência, com respeito aos condôminos.</p>
+                      <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
+                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                          <strong className="text-foreground">Conformidade da Obra:</strong> Garantia de que a execução do projeto atende a todas as normas técnicas, de segurança e legais, prevenindo autuações, embargos e responsabilidades futuras.
+                        </p>
                       </div>
-                      <div className="bg-primary/30 p-3 rounded-lg">
-                        <p className="text-sm text-foreground/90">Mediação e Resolução Ágil: Solução de conflitos de vizinhança, participação em assembleias e defesa em ações judiciais.</p>
+                      <div className="bg-primary/30 p-4 rounded-lg border-l-4 border-accent">
+                        <p className="text-sm md:text-base text-foreground/90 leading-relaxed">
+                          <strong className="text-foreground">Transição Segura e Defesa:</strong> Gestão jurídica da entrega das unidades, constituição do condomínio e defesa proativa em eventuais disputas, protegendo o patrimônio e a reputação da sua empresa.
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div className="mb-5 lg:mb-6">
-                    <h3 className="text-lg font-semibold mb-3 lg:mb-4 text-foreground flex items-center">
+                  
+                  <div className="mb-7">
+                    <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center">
                       <FileCheck className="w-5 h-5 mr-2 text-accent" />
-                      Resultado para Seu Condomínio:
+                      Resultados para Sua Construtora:
                     </h3>
                     <div className="grid grid-cols-1 gap-2">
-                      <div className="bg-primary/30 p-3 rounded-lg">
-                        <p className="text-sm text-foreground/90">✓ Redução de até 80% em ações judiciais desnecessárias</p>
+                      <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground/90">
+                          <strong className="text-foreground">Aceleração do Licenciamento e da Obra</strong>
+                        </span>
                       </div>
-                      <div className="bg-primary/30 p-3 rounded-lg">
-                        <p className="text-sm text-foreground/90">✓ Recuperação rápida de cotas atrasadas</p>
+                      <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground/90">
+                          <strong className="text-foreground">Contratos à Prova de Contestações</strong>
+                        </span>
                       </div>
-                      <div className="bg-primary/30 p-3 rounded-lg">
-                        <p className="text-sm text-foreground/90">✓ Proteção jurídica ao síndico contra responsabilidades pessoais</p>
+                      <div className="bg-primary/30 p-3 rounded-lg flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground/90">
+                          <strong className="text-foreground">Prevenção de Autuações e Embargos</strong>
+                        </span>
                       </div>
                     </div>
                   </div>
-                  <div className="mt-auto pt-4 lg:pt-5 border-t border-border/30">
+                  
+                  <div className="mt-auto pt-5 border-t border-border/30">
                     <Button
                       size="lg"
                       variant="outline"
@@ -256,10 +288,11 @@ export const HeroSection = () => {
                   </div>
                 </div>
               </div>
+              
               <div className="lg:w-1/2 animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <div className="h-full flex flex-col">
                   <div className="bg-primary-light/80 backdrop-blur-sm p-5 rounded-t-md border-b border-accent/30 w-full text-center">
-                    <h2 className="text-xl font-semibold mb-1 text-foreground font-sans tracking-wide uppercase">Diagnóstico Estratégico</h2>
+                    <h2 className="text-xl font-semibold mb-1 text-foreground font-sans tracking-wide uppercase">DIAGNÓSTICO ESTRATÉGICO</h2>
                   </div>
                   <div className="flex-grow">
                     <FormCard formData={formData} setFormData={setFormData} handleSubmit={handleSubmit} isMobile={false} />
