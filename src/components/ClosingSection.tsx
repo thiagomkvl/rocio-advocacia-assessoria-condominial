@@ -63,7 +63,6 @@ export const ClosingSection = () => {
                 onClick={handleCTAClick}
                 className="w-full max-w-md mx-auto bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-md transition-all duration-300 px-10 py-7 text-lg md:text-xl"
               >
-                <Phone className="mr-2 w-6 h-6" />
                 FALAR COM ESPECIALISTA
               </Button>
               <p className="text-sm text-muted-foreground mt-3">
