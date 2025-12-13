@@ -48,7 +48,7 @@ const FormContent = ({ formData, setFormData, handleSubmit, isMobile }: any) => 
       </div>
       <div className={`space-y-3 ${isMobile ? "space-y-3" : "space-y-3"}`}>
         <Label className={`font-medium text-foreground/90 ${radioTextClasses} block text-left`}>
-          Qual o perfil principal do seu condomínio?
+          Onde seu condomínio mais precisa de auxílio jurídico?
         </Label>
         <RadioGroup value={formData.profile} onValueChange={(value) => setFormData({ ...formData, profile: value })} required className="space-y-3">
           <div className="flex items-center space-x-3">
@@ -93,7 +93,7 @@ const FormCard = ({ formData, setFormData, handleSubmit, isMobile }: any) => {
           <div className="flex items-center gap-2 mb-5">
             <Shield className={`${iconSize} text-accent`} />
             <h3 className={`font-semibold ${isMobile ? "text-base" : "text-lg"} text-foreground`}>
-              Diagnóstico Estratégico Condominial
+              Diagnóstico Jurídico Condominial
             </h3>
           </div>
           <ul className="space-y-4">
